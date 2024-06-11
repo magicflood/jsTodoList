@@ -10,11 +10,14 @@ function addTodo(event) {
 
     let todoDiv = document.createElement("div");
 
+    todoDiv.style.marginTop = "30px"
+
     let check = document.createElement("input")
     check.setAttribute("type", "checkbox")
     todoDiv.appendChild(check);
     check.style.width = "18px"
     check.style.height = "18px"
+    check.style.borderRadius = "30px"
 
     let text = document.createElement("li");
     text.innerHTML = todoInput.value;
@@ -26,7 +29,8 @@ function addTodo(event) {
     btnTrash.style.border = "none"
     btnTrash.style.width = "18px"
     btnTrash.style.height = "18px"
-    btnTrash.innerHTML = '<i class="fa-solid fa-trash"></i>'
+    btnTrash.style.marginLeft = "345px"
+    btnTrash.innerHTML = '<i class="fa-solid fa-xmark"></i>'
     todoDiv.appendChild(btnTrash);
     todoList.appendChild(todoDiv)
     todoDiv.style.marginLeft = "40px"
