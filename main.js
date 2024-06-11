@@ -16,6 +16,12 @@ function addTodo(event) {
     check.style.width = "18px"
     check.style.height = "18px"
 
+    let text = document.createElement("li");
+    text.innerHTML = todoInput.value;
+    text.style.color = "black"
+    text.style.listStyleType = "none"
+    todoDiv.appendChild(text)
+
     let btnTrash = document.createElement("button");
     btnTrash.style.border = "none"
     btnTrash.style.width = "18px"
